@@ -1,120 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>ChatLaVista</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!--[if lt IE 9]>
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>ChatLaVista</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-	  <script>
-		window.onload = function() {
-		  var usag = window.navigator.userAgent;
-		  console.log(usag);
-		  
-		  var paramis = new URLSearchParams(window.location.search);
-		  paramisid = paramis.get('id');
-		  
-		  console.log(paramisid);
-		  
-		  fetch('https://api.backendless.com/94D67A40-1A22-E884-FF3E-64C5DAB2D800/029C5621-F196-41D0-A786-A53A69085AC4/data/useragent', {
-			  method: 'POST',
-			  headers: {
-					"Content-type": "application/json; charset=UTF-8"
-				},
-			  body: JSON.stringify({
-				'for_id': paramisid,
-				'user_agent': usag
-			  })
-			});
-		};
-	  </script>
-   </head>
-   <!-- body -->
-   <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div>
-      <!-- end loader -->
-      <!-- header -->
-      <div class="header">
-         <div class="container">
-            <div class="row d_flex">
-               <div class=" col-md-2 col-sm-3 col logo_section">
-                  <div class="full">
-                     <div class="center-desk">
-                        <div class="logo">
-                           <a href="index.html"><img src="images/logo.png" height="100px" width="100px"/></a>
-                        </div>
+   <script>
+      window.onload = function () {
+         var usag = window.navigator.userAgent;
+         console.log(usag);
+
+         var paramis = new URLSearchParams(window.location.search);
+         paramisid = paramis.get('id');
+
+         console.log(paramisid);
+
+         fetch('https://api.backendless.com/94D67A40-1A22-E884-FF3E-64C5DAB2D800/029C5621-F196-41D0-A786-A53A69085AC4/data/useragent', {
+            method: 'POST',
+            headers: {
+               "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify({
+               'for_id': paramisid,
+               'user_agent': usag
+            })
+         });
+      };
+   </script>
+</head>
+<!-- body -->
+
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <div class="header">
+      <div class="container">
+         <div class="row d_flex">
+            <div class=" col-md-2 col-sm-3 col logo_section">
+               <div class="full">
+                  <div class="center-desk">
+                     <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" height="100px" width="100px" /></a>
                      </div>
                   </div>
                </div>
-               <div class="col-md-8 col-sm-12">
-                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            </div>
+            <div class="col-md-8 col-sm-12">
+               <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                     aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
-                     </button>
-                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
 
-                     </div>
-                  </nav>
-               </div>
+                  </div>
+               </nav>
             </div>
          </div>
       </div>
-      <!-- end header inner -->
-      <!-- top -->
-      <div class="full_bg">
-         <div class="slider_main">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <!-- carousel code -->
-                     <div id="banner1" class="carousel slide">
-                        <ol class="carousel-indicators">
-                           <li data-target="#banner1" data-slide-to="0" class="active"></li>
-                           <li data-target="#banner1" data-slide-to="1"></li>
-                           <li data-target="#banner1" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                           <!-- first slide -->
-                           <div class="carousel-item active">
-                              <div class="carousel-caption relative">
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                       <div class="dream">
-                                          <h1>
-                                             Test our <br>Android App <br>and get paid
-                                          </h1> 
-                                       </div>
+   </div>
+   <!-- end header inner -->
+   <!-- top -->
+   <div class="full_bg">
+      <div class="slider_main">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <!-- carousel code -->
+                  <div id="banner1" class="carousel slide">
+                     <ol class="carousel-indicators">
+                        <li data-target="#banner1" data-slide-to="0" class="active"></li>
+                        <li data-target="#banner1" data-slide-to="1"></li>
+                        <li data-target="#banner1" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <!-- first slide -->
+                        <div class="carousel-item active">
+                           <div class="carousel-caption relative">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="dream">
+                                       <h1>
+                                          Test our <br>Android App <br>and get paid
+                                       </h1>
                                     </div>
-                                    <div class="col-md-6">
-                                       <div class="dream_img">
-                                          <figure><img src="images/dream_img.png" alt="#"/></figure>
-                                       </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="dream_img">
+                                       <figure><img src="images/dream_img.png" alt="#" /></figure>
                                     </div>
                                  </div>
                               </div>
                            </div>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -128,8 +131,9 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage text_align_center">
-                     <h2> Interested to test?  <span class="blue_light">Register here!</span></h2>
-					 <p>Based on your testing performance, you could <b><span class="blue_light">land a job</span></b> with us</p>
+                     <h2> Interested to test? <span class="blue_light">Register here!</span></h2>
+                     <p>Based on your testing performance, you could <b><span class="blue_light">land a job</span></b>
+                        with us!</p>
                   </div>
                </div>
             </div>
@@ -141,7 +145,7 @@
                      <div class="row">
                         <div class="col-sm-2">
                            <div class="domain-price">
-                              <strong>What you test <br> What we pay</strong>
+                              <strong>You test <br> We pay</strong>
                            </div>
                         </div>
                         <div class="col-sm-10">
@@ -165,13 +169,87 @@
                            </div>
                         </div>
                      </div>
-                     <a class="read_more" href="domain.html">Register</a>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <center>
+                              <button id="register-now" class="button-34" role="button">Register Now!</button>
+                              <p id="register-message"> </p>
+                           </center>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
       <!-- end domain -->
+      <div class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>About <span class="blue_light">Anonymous Paid Chat</span></h2>
+                  </div>
+               </div>
+               <div class="col-md-10 offset-md-1">
+                  <div class="about_img text_align_center">
+                     <figure><img src="images/anonychat.jpg" alt="#" /></figure>
+                  </div>
+                  
+                  <div class="about_img text_align_justify">
+                     <p>
+                        Anonymous paid chat is our newest invite-only feature which allows you to take requests for
+                        chats for a payment depending on the duration of the chat.
+                        You receive requests for chats/group chats for a payment per minute ranging from &#8377 10 to
+                        &#8377 1,000/min (more for group chats). For chats involving photos/videos requests,
+                        you receive an additional payment per photo/video and also additional tips. Go on! Have a nice
+                        conversation and earn money. No chat goes unpaid.
+                     </p>
+                  </div>
+                  <p>
+                     <b>
+                        Q. How much do you cut?
+                     </b>
+                  <p>
+                     <b>A.</b> We take just 2% of your earnings as platform fees. That means that if you earn &#8377
+                     50,000 in a month, then we deduct only &#8377 1,000.
+                     <b><u>No other fees. Ever!</u></b>
+                  </p>
+                  <br />
+                  <p>
+                     <b>
+                        Q. How do I get paid?
+                     </b>
+                  <p>
+                     <b>A.</b>
+                     <b>For US/Canada users:</b> Payments are made using Paypal or Venmo.
+                     <b>For Indian users:</b> Payments are made using UPI, NEFT transfers or Paypal.
+                     <b>For all other users:</b> Payments are made using Paypal.
+                  </p>
+                  <br />
+                  <p>
+                     <b>
+                        Q. Is my content safe?
+                     </b>
+                  <p>
+                     <b>A.</b> We take safety seriously. All your messages are deleted as soon as they are read.
+                     None of your images/video are allowed to be downloaded. No screenshots are allowed in the app.
+                     All data is encrypted and nothing is stored on our servers when you use Anonymous Paid Chat.
+                  </p>
+                  <br />
+                  <p>
+                     <b>
+                        Q. Do I need to pay?
+                     </b>
+                  <p>
+                     <b>A.</b> Never! We are a company which believes in free-speech. You are here to enjoy and earn for your time.
+                     The only way we make money is by taking a small percentage (2%) of your earnings to cover our costs. The more time you spend here,
+                     the more you earn, and the more we earn! So, we urge you to make the most of your time on our app. Go on! Go anonymous. Be yourself!
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
       <!-- guarantee -->
       <div class="guarantee">
          <div class="container">
@@ -189,16 +267,19 @@
                      <div class="guarantee-box text_align_center">
                         <img width="300px" height="300px" src="images/encrypted.jpg" />
                         <h3>Encrypted chats</h3>
-                        <p style="text-align:justify">End-to-end encryption is a security method that keeps your communications secure. With end-to-end encryption, no one, including us and third parties, can read your messages as they travel between your phone and the phone you message.</p>
+                        <p style="text-align:justify">End-to-end encryption is a security method that keeps your
+                           communications secure. With end-to-end encryption, no one, including us and third parties,
+                           can read your messages as they travel between your phone and the phone you message.</p>
                      </div>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6" style="padding-top:20px">
                   <div id="ho_co" class="guarantee-box_main">
                      <div class="guarantee-box text_align_center">
-						<img width="205px" height="205px" src="images/go-round.svg" />
+                        <img width="205px" height="205px" src="images/go-round.svg" />
                         <h3>Group chats</h3>
-                        <p style="text-align:justify">Chat with upto 5000 people at the same time. All your friends, family at one place. No lags, no delays. That's our promise.</p>
+                        <p style="text-align:justify">Chat with upto 5000 people at the same time. All your friends,
+                           family at one place. No lags, no delays. That's our promise.</p>
                      </div>
                   </div>
                </div>
@@ -207,7 +288,10 @@
                      <div class="guarantee-box text_align_center">
                         <img width="208px" height="208px" src="images/anonymous.jpg" />
                         <h3>Anonymous & Paid</h3>
-                        <p style="text-align:justify">Our state-of-the-art and patented anonymous paid chat ensures your anonymity - Your messages are deleted automatically, your pictures and videos are protected - no download, no screenshots possible. Period. Your content is in safe hands, giving you the freedom to be yourself.</p>
+                        <p style="text-align:justify">Our state-of-the-art and patented anonymous paid chat ensures your
+                           anonymity - Your messages are deleted automatically, your pictures and videos are protected -
+                           no download, no screenshots possible. Period. Your content is in safe hands, giving you the
+                           freedom to be yourself.</p>
                      </div>
                   </div>
                </div>
@@ -216,7 +300,9 @@
                      <div class="guarantee-box text_align_center">
                         <img width="170px" height="170px" src="images/privacy.jpg" />
                         <h3>privacy</h3>
-                        <p style="text-align:justify">Privacy is a right that as such also enables our enjoyment of other rights, and interference with our privacy often provides the gateway to the violation of the rest of our rights.</p>
+                        <p style="text-align:justify">Privacy is a right that as such also enables our enjoyment of
+                           other rights, and interference with our privacy often provides the gateway to the violation
+                           of the rest of our rights.</p>
                      </div>
                   </div>
                </div>
@@ -234,12 +320,15 @@
                   </div>
                </div>
                <div class="col-md-10 offset-md-1">
-                  <div class="about_img text_align_center">
-                     <figure><img src="images/about.png" alt="#"/></figure>
+                  <div class="about_img text_align_justify">
+                     <figure><img src="images/about.png" alt="#" /></figure>
                      <p>
-                        Born in Sierra Madre, Los Angeles, we are a 35 member large family with our user base growing to 
-						over a hundred thousand active monthly users. Join us and help us expand even further.
-						Join our family of passionate members from the USA, France, India and Sweden.
+                        Born in Sierra Madre, Los Angeles, we are a 35 member large family with our user base growing
+                        close to
+                        a hundred thousand active monthly users. We are currently in beta and are only allowing
+                        invite-only joins.
+                        We need you to test our app so that we can test all waters.
+                        Join our family of passionate members from the USA, France, India and Sweden.
                      </p>
                   </div>
                </div>
@@ -260,13 +349,13 @@
                   <form id="request" class="main_form">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name=" Name"> 
+                           <input class="contactus" placeholder="Name" type="type" name=" Name">
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone number" type="type" name="Phone Number">                          
+                           <input class="contactus" placeholder="Phone number" type="type" name="Phone Number">
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Your Email" type="type" name="Email">                          
+                           <input class="contactus" placeholder="Your Email" type="type" name="Email">
                         </div>
                         <div class="col-md-12">
                            <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
@@ -315,5 +404,6 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <!-- sidebar -->
       <script src="js/custom.js"></script>
-   </body>
+</body>
+
 </html>
